@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FD39F3B7-EBAB-4871-BFE1-4C6E98F089B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda", "Agenda\Agenda.csproj", "{10FF580A-DBE3-4B44-BC71-04B6D99FA455}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts SQL", "Scripts SQL", "{9DC5BE88-0FA6-4E90-A7A2-0FB20A175CC5}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts_tabela.sql = Scripts_tabela.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD39F3B7-EBAB-4871-BFE1-4C6E98F089B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD39F3B7-EBAB-4871-BFE1-4C6E98F089B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD39F3B7-EBAB-4871-BFE1-4C6E98F089B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD39F3B7-EBAB-4871-BFE1-4C6E98F089B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10FF580A-DBE3-4B44-BC71-04B6D99FA455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FF580A-DBE3-4B44-BC71-04B6D99FA455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FF580A-DBE3-4B44-BC71-04B6D99FA455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FF580A-DBE3-4B44-BC71-04B6D99FA455}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
