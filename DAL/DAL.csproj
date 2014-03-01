@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -47,14 +48,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistence\AgendaDal.cs" />
+    <Compile Include="Entities\Compromisso.cs">
+      <DependentUpon>Repositorio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Contato.cs">
+      <DependentUpon>Repositorio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Repositorio.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Repositorio.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Repositorio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Repositorio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Repositorio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Repositorio.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Usuario.cs">
+      <DependentUpon>Repositorio.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\ContatoDal.cs" />
+    <Compile Include="Persistence\UsuarioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="Entities\Repositorio.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Repositorio.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\Repositorio.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Repositorio.edmx</DependentUpon>
+      <LastGenOutput>Repositorio.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Entities\Repositorio.edmx.diagram">
+      <DependentUpon>Repositorio.edmx</DependentUpon>
+    </None>
+    <None Include="Entities\Repositorio.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Repositorio.edmx</DependentUpon>
+      <LastGenOutput>Repositorio.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
