@@ -47,56 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Compromisso.cs">
-      <DependentUpon>Repositorio.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Contato.cs">
-      <DependentUpon>Repositorio.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Repositorio.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Repositorio.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Repositorio.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Repositorio.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Repositorio.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Repositorio.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Usuario.cs">
-      <DependentUpon>Repositorio.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Persistence\AgendaDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistence\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Model\Repositorio.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Repositorio.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Model\Repositorio.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Repositorio.edmx</DependentUpon>
-      <LastGenOutput>Repositorio.Context.cs</LastGenOutput>
-    </None>
-    <None Include="Model\Repositorio.edmx.diagram">
-      <DependentUpon>Repositorio.edmx</DependentUpon>
-    </None>
-    <None Include="Model\Repositorio.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Repositorio.edmx</DependentUpon>
-      <LastGenOutput>Repositorio.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
