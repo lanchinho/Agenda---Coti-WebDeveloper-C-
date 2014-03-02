@@ -72,6 +72,7 @@
     <Compile Include="Entities\Usuario.cs">
       <DependentUpon>Repositorio.tt</DependentUpon>
     </Compile>
+    <Compile Include="Persistence\CompromissoDal.cs" />
     <Compile Include="Persistence\ContatoDal.cs" />
     <Compile Include="Persistence\UsuarioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
