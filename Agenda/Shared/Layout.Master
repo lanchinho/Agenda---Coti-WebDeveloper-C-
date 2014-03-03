@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Agenda.Shared.Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Agenda Virtual</title>
+
+    <style type="text/css">
+        body 
+        {
+            font-family: Verdana; font-size: 9pt; padding:30px;
+        }    
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1>Agenda Virtual</h1>
+        <ul>
+            <li><a href="/Restrito/Criarcontato.aspx">Cadastrar Contato</a></li>
+            <li><a href="/Restrito/Consultarcontato.aspx">Consultar Contatos</a></li>
+            <li><a href="/Restrito/Criarcompromisso.aspx">Criar Compromisso</a></li>
+            <li><a href="/Restrito/Consultarcompromisso.aspx">Consultar Compromissos</a></li>    
+        </ul>
+        <asp:ContentPlaceHolder ID="principal" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
