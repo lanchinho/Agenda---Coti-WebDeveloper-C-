@@ -59,7 +59,7 @@ namespace DAL.Persistence
         /// </summary>
         /// <param name="IdContato"></param>
         /// <returns>Retorna Contato</returns>
-        public Contato buscaContatoPorId(int IdContato)
+        private Contato obterContatoPorId(int IdContato)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace DAL.Persistence
         /// Método para Exclusão de Contato
         /// </summary>
         /// <param name="c"></param>
-        public void Excluir(Contato c)
+        public void excluirContato(Contato c)
         {
             try
             {
@@ -90,6 +90,29 @@ namespace DAL.Persistence
                 throw new Exception("Erro ao excluir o contato " + e.Message);
             }
         }
+
+        /// <summary>
+        /// Método responsável por atualizar as informações de um contato
+        /// </summary>
+        /// <param name="c"></param>
+        public void atualizarContato(Contato c)
+        {
+            try
+            {
+                Contato contato = obterContatoPorId(c.IdContato);
+                contato.NomeContato = c.NomeContato;
+                contato.Telefone = c.Telefone;
+                contato.EmailContato = c.EmailContato;
+
+                Con.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                
+                throw new Exception("Não foi possível atualizar o contato." + e.Message);
+            }
+        }
+
         /// <summary>
         /// Método responsável por fechar a conexão com o banco de dados.
         /// </summary>

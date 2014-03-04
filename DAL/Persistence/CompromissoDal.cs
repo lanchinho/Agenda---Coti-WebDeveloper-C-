@@ -59,7 +59,7 @@ namespace DAL.Persistence
         /// <param name="IdCompromisso"></param>
         /// <returns>Compromisso</returns>
 
-        public Compromisso obterCompromissoPeloId(int IdCompromisso)
+        private Compromisso obterCompromissoPeloId(int IdCompromisso)
         {
             try
             {
@@ -85,6 +85,28 @@ namespace DAL.Persistence
             catch (Exception e)
             {
                 throw new Exception("Erro ao excluir o compromisso: " + e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Método responsável por atualizar informações de um compromisso.
+        /// </summary>
+        /// <param name="c"></param>
+        public void atualizarCompromisso(Compromisso c)
+        {
+            try
+            {
+                Compromisso compromisso = obterCompromissoPeloId(c.IdCompromisso);
+
+                compromisso.Titulo = c.Titulo;
+                compromisso.Descricao = c.Descricao;
+                compromisso.Data = c.Data;
+
+                Con.SaveChanges();
+            }
+            catch (Exception e)
+            {    
+                throw new Exception("Erro ao atualizar o compromisso: " + e.Message);
             }
         }
 
