@@ -13,7 +13,7 @@ namespace Agenda.Restrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+              
         }
 
         protected void btnCadastro_Click(object sender, EventArgs e)
@@ -24,6 +24,7 @@ namespace Agenda.Restrito
                 c.NomeContato = txtNomeContato.Text;
                 c.EmailContato = txtEmailContato.Text;
                 c.Telefone = txtTelefoneContato.Text;
+                c.IdUsuario = ((Usuario)Session["usuario"]).IdUsuario;
 
                 using (ContatoDal cDal = new ContatoDal())
                 {

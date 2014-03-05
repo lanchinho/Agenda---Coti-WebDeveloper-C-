@@ -45,17 +45,18 @@ namespace DAL.Persistence
         {
             try
             {
-                Usuario usuario = Con.Usuario.SingleOrDefault(user =>((user.Login == u.Login)&&(user.Senha == u.Senha)));
+                Usuario usuario = Con.Usuario.SingleOrDefault(user => ((user.Login == u.Login) && (user.Senha == u.Senha)));
                 if (usuario != null)
                     return true;
                 else
                     return false;
             }
             catch (Exception e)
-            { 
-                throw new Exception ("Erro ao recuperar o usuário: " + e.Message);
+            {
+                throw new Exception("Erro ao recuperar o usuário: " + e.Message);
             }
         }
+
         /// <summary>
         /// Método responsável por fechar a conexão com o banco de dados.
         /// </summary>

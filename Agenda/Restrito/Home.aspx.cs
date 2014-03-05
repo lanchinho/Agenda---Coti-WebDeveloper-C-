@@ -17,7 +17,6 @@ namespace Agenda.Restrito
                 Usuario u = Session["usuario"] as Usuario;
                 lblNomeUsuario.Text = u.Login;
             }
-
         }
     }
 }
