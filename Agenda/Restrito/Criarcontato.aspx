@@ -13,7 +13,7 @@
     <asp:TextBox ID="txtTelefoneContato" runat="server" />
     <br /><br />
 
-    <asp:Button ID="btnCadastro" runat="server" Text="Cadastrar Contato" OnClick="btnCadastro_Click"/>
+    <asp:Button ID="btnCadastro" runat="server" Text="Cadastrar Contato" OnClick="btnCadastro_Click" Class="btn-default"/>
 
     <p>
         <asp:Label ID="lblMensagem" runat="server" />

@@ -20,11 +20,12 @@ namespace Agenda.Restrito
         {
             try
             {
+                string rawId = Request.QueryString["IdUsuario"];
                 Contato c = new Contato();
                 c.NomeContato = txtNomeContato.Text;
                 c.EmailContato = txtEmailContato.Text;
                 c.Telefone = txtTelefoneContato.Text;
-                c.IdUsuario = ((Usuario)Session["usuario"]).IdUsuario;
+                //c.IdUsuario = u.IdUsuario;
 
                 using (ContatoDal cDal = new ContatoDal())
                 {

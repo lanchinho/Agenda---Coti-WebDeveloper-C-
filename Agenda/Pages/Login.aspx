@@ -9,12 +9,11 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Login</h1>
         <asp:Login
               ID="formLogin"
               runat="server"
               OnAuthenticate="AutenticarUsuario"
-              TitleText="Formulário de Login"
+              TitleText="Por Favor Identifique-se"
               UserNameLabelText="Login de Acesso:"
               PasswordLabelText="Acessar Sistema"
               LoginButtonText="Entrar"

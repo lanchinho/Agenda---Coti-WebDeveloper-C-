@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\bootstrap-responsive.css" />
+    <Content Include="Content\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\lavish-bootstrap.css" />
     <Content Include="Pages\Cadastro.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Sair.aspx" />
@@ -65,6 +70,9 @@
     <Content Include="Restrito\Criarcompromisso.aspx" />
     <Content Include="Restrito\Criarcontato.aspx" />
     <Content Include="Restrito\Home.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

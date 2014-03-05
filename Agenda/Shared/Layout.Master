@@ -5,33 +5,50 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Agenda Virtual</title>
-
-    <style type="text/css">
-        body 
-        {
-            font-family: Verdana; font-size: 9pt; padding:30px;
-        }    
-    </style>
+    <link href="../Content/css/lavish-bootstrap.css" rel="stylesheet" />
 
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <h1>Agenda Virtual</h1>
-        <ul>
-            <li><a href="/Restrito/Criarcontato.aspx">Cadastrar Contato</a></li>
-            <li><a href="/Restrito/Consultarcontato.aspx">Consultar Contatos</a></li>
-            <li><a href="/Restrito/Criarcompromisso.aspx">Criar Compromisso</a></li>
-            <li><a href="/Restrito/Consultarcompromisso.aspx">Consultar Compromissos</a></li>
-            <li><a href="/Pages/Sair.aspx">Sair</a></li>  
-        </ul>
-        <asp:ContentPlaceHolder ID="principal" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Agenda Virtual</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/Restrito/Home.aspx">Home</a></li>
+                        <li><a href="/Restrito/Criarcontato.aspx">Cadastrar Contato</a></li>
+                        <li><a href="/Restrito/Consultarcontato.aspx">Consultar Contatos</a></li>
+                        <li><a href="/Restrito/Criarcompromisso.aspx">Criar Compromisso</a></li>
+                        <li><a href="/Restrito/Consultarcompromisso.aspx">Consultar Compromissos</a></li>
+                        <li><a href="/Pages/Sair.aspx">Sair</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+
+            <asp:ContentPlaceHolder ID="principal" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer>
+                <p>&copy; Guilherme "Lanchinho" 2014</p>
+            </footer>
+        </div>
+
+        <!-- /.container -->
+        <script src="../Scripts/jquery-2.1.0.min.js"></script>
+        <script src="../Scripts/bootstrap.min.js"></script>
     </form>
 </body>
 </html>
-
-
 
