@@ -25,7 +25,7 @@ namespace Agenda.Restrito
                 c.EmailContato = txtEmailContato.Text;
                 c.Telefone = txtTelefoneContato.Text;
 
-                using(ContatoDal cDal = new ContatoDal())
+                using (ContatoDal cDal = new ContatoDal())
                 {
                     cDal.salvarContato(c);
                 }
@@ -34,7 +34,7 @@ namespace Agenda.Restrito
             }
             catch (Exception ex)
             {
-                
+
                 lblMensagem.Text = ex.Message;
             }
         }

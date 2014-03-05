@@ -22,7 +22,8 @@
             <li><a href="/Restrito/Criarcontato.aspx">Cadastrar Contato</a></li>
             <li><a href="/Restrito/Consultarcontato.aspx">Consultar Contatos</a></li>
             <li><a href="/Restrito/Criarcompromisso.aspx">Criar Compromisso</a></li>
-            <li><a href="/Restrito/Consultarcompromisso.aspx">Consultar Compromissos</a></li>    
+            <li><a href="/Restrito/Consultarcompromisso.aspx">Consultar Compromissos</a></li>
+            <li><a href="/Pages/Sair.aspx">Sair</a></li>  
         </ul>
         <asp:ContentPlaceHolder ID="principal" runat="server">
         

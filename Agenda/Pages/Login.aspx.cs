@@ -27,7 +27,11 @@ namespace Agenda.Pages
                 using (UsuarioDal uDal = new UsuarioDal())
                 {
                     if (uDal.verificaUsuario(u))
+                    {
+                        Session.Add("usuario", u);
+                        Session.Timeout = 2;
                         e.Authenticated = true;
+                    }
                     else
                         e.Authenticated = false;
                 }

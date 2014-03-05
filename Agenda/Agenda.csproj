@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="Pages\Cadastro.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Sair.aspx" />
     <Content Include="Restrito\Consultarcompromisso.aspx" />
     <Content Include="Restrito\Consultarcontato.aspx" />
     <Content Include="Restrito\Criarcompromisso.aspx" />
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sair.aspx.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sair.aspx.designer.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restrito\Consultarcompromisso.aspx.cs">
