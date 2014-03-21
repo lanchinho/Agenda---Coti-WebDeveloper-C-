@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL.Entities;
+using DAL.Persistence;
 
 namespace Agenda.Restrito
 {
@@ -12,6 +14,37 @@ namespace Agenda.Restrito
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnCadastraCompromisso_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Compromisso comp = new Compromisso();
+                comp.Titulo = txtTituloCompromisso.Text;
+                comp.Descricao = txtDescricao.Text;
+                comp.Data = Calendar1.SelectedDate;
+
+                if (Session != null)
+                {
+                    Usuario u = Session["usuario"] as Usuario;
+
+
+                    u.Compromisso.Add(comp);
+                }
+
+                using (CompromissoDal compDal = new CompromissoDal())
+                {
+                    compDal.salvarCompromisso(comp);
+                }
+
+                Response.Redirect("Home.aspx");
+            }
+            catch (Exception ex)
+            {
+
+                lblMensagem.Text = ex.Message;
+            }
         }
     }
 }
