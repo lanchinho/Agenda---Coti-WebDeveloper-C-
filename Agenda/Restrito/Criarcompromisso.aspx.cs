@@ -29,20 +29,17 @@ namespace Agenda.Restrito
                 {
                     Usuario u = Session["usuario"] as Usuario;
 
-
-                    u.Compromisso.Add(comp);
-                }
-
-                using (CompromissoDal compDal = new CompromissoDal())
-                {
-                    compDal.salvarCompromisso(comp);
+                    using (CompromissoDal compDal = new CompromissoDal())
+                    {
+                        comp.IdUsuario = u.IdUsuario;
+                        compDal.salvarCompromisso(comp);
+                    }
                 }
 
                 Response.Redirect("Home.aspx");
             }
             catch (Exception ex)
             {
-
                 lblMensagem.Text = ex.Message;
             }
         }

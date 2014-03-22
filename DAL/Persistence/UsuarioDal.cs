@@ -41,15 +41,15 @@ namespace DAL.Persistence
         /// </summary>
         /// <param name="u"></param>
         /// <returns>Retorna True para usuários existentes e false para os que não existem</returns>
-        public bool verificaUsuario(Usuario u)
+        public int verificaUsuario(Usuario u)
         {
             try
             {
                 Usuario usuario = Con.Usuario.SingleOrDefault(user => ((user.Login == u.Login) && (user.Senha == u.Senha)));
                 if (usuario != null)
-                    return true;
+                    return usuario.IdUsuario;
                 else
-                    return false;
+                    return 0;
             }
             catch (Exception e)
             {

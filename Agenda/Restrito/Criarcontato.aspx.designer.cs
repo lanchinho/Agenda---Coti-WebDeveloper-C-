@@ -22,6 +22,15 @@ namespace Agenda.Restrito {
         protected global::System.Web.UI.WebControls.TextBox txtNomeContato;
         
         /// <summary>
+        /// reqNomeContato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqNomeContato;
+        
+        /// <summary>
         /// txtEmailContato control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Agenda.Restrito {
         protected global::System.Web.UI.WebControls.TextBox txtEmailContato;
         
         /// <summary>
+        /// reqEmailContato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reqEmailContato;
+        
+        /// <summary>
         /// txtTelefoneContato control.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,15 @@ namespace Agenda.Restrito {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefoneContato;
+        
+        /// <summary>
+        /// reqTelContato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reqTelContato;
         
         /// <summary>
         /// btnCadastro control.

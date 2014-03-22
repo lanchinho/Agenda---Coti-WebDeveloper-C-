@@ -20,16 +20,20 @@ namespace Agenda.Restrito
         {
             try
             {
-                string rawId = Request.QueryString["IdUsuario"];
                 Contato c = new Contato();
                 c.NomeContato = txtNomeContato.Text;
                 c.EmailContato = txtEmailContato.Text;
                 c.Telefone = txtTelefoneContato.Text;
-                //c.IdUsuario = u.IdUsuario;
 
-                using (ContatoDal cDal = new ContatoDal())
+                if(Session != null)
                 {
-                    cDal.salvarContato(c);
+                    Usuario u = Session["usuario"] as Usuario;
+
+                    using (ContatoDal cDal = new ContatoDal())
+                    {
+                        c.IdUsuario = u.IdUsuario;
+                        cDal.salvarContato(c);
+                    }
                 }
 
                 Response.Redirect("Home.aspx");

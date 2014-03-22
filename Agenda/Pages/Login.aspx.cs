@@ -26,8 +26,13 @@ namespace Agenda.Pages
 
                 using (UsuarioDal uDal = new UsuarioDal())
                 {
-                    if (uDal.verificaUsuario(u))
+                    //Resgata o ID do usuário...
+                    int idUsuario = uDal.verificaUsuario(u);
+
+                    if (idUsuario != 0)
                     {
+                        //Coloca o ID do usuário atual dentro da sessão.
+                        u.IdUsuario = idUsuario;
                         Session.Add("usuario", u);
                         Session.Timeout = 2;
                         e.Authenticated = true;
