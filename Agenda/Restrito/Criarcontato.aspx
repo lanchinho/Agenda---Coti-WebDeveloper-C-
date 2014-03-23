@@ -30,7 +30,7 @@
         ID="reqTelContato"
         runat="server"
         ControlToValidate="txtTelefoneContato"
-        ValidationExpression="^10|[1-9]{2}-[2-9][0-9]{3}-[0-9]{4}|[2-9][0-9]{4}-[0-9]{4}$"
+        ValidationExpression="^10|[1-9]{2}-([2-9][0-9]{3}-[0-9]{4}|[2-9][0-9]{4}-[0-9]{4})$"
         ErrorMessage="Número de telefone inválido"/>
     <br />
     <br />

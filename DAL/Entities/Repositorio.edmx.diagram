@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="326d640676b24142b94463ef66413c33" Name="Diagram1">
         <EntityTypeShape EntityType="BancoModel.Compromisso" Width="1.5" PointX="6.6442736548577779" PointY="19.114399203618245" />
-        <EntityTypeShape EntityType="BancoModel.Contato" Width="1.5" PointX="5.1737355688464524" PointY="13.929176873494487" />
+        <EntityTypeShape EntityType="BancoModel.Contato" Width="1.5" PointX="5.1737355688464524" PointY="13.929176873494487" IsExpanded="true" />
         <EntityTypeShape EntityType="BancoModel.Usuario" Width="1.5" PointX="9.7839071274660085" PointY="22.635968993714066" />
         <AssociationConnector Association="BancoModel.FKCompromissoUsuario" />
         <AssociationConnector Association="BancoModel.FKContatoUsuario" />
