@@ -69,6 +69,7 @@
     <Content Include="Restrito\Consultarcontato.aspx" />
     <Content Include="Restrito\Criarcompromisso.aspx" />
     <Content Include="Restrito\Criarcontato.aspx" />
+    <Content Include="Restrito\DetalhesContato.aspx" />
     <Content Include="Restrito\Home.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="Restrito\Criarcontato.aspx.designer.cs">
       <DependentUpon>Criarcontato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restrito\DetalhesContato.aspx.cs">
+      <DependentUpon>DetalhesContato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restrito\DetalhesContato.aspx.designer.cs">
+      <DependentUpon>DetalhesContato.aspx</DependentUpon>
     </Compile>
     <Compile Include="Restrito\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

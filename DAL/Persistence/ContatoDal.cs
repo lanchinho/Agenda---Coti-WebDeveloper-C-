@@ -55,6 +55,23 @@ namespace DAL.Persistence
         }
 
         /// <summary>
+        /// Método para listar todos os contatos de um Usuário
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Lista contendo todos os contatos de um dado Usuário</returns>
+        public List<Contato> listarTodosDoUsuario(int id)
+        {
+            try
+            {
+                return Con.Contato.Where(c => c.IdUsuario == id).ToList();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao buscar os contatos do usuário: " + e.Message);
+            }
+        }
+
+        /// <summary>
         /// Método para buscar um contato dado o seu ID
         /// </summary>
         /// <param name="IdContato"></param>
@@ -108,7 +125,7 @@ namespace DAL.Persistence
             }
             catch (Exception e)
             {
-                
+
                 throw new Exception("Não foi possível atualizar o contato." + e.Message);
             }
         }
