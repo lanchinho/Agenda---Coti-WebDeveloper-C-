@@ -76,7 +76,7 @@ namespace DAL.Persistence
         /// </summary>
         /// <param name="IdContato"></param>
         /// <returns>Retorna Contato</returns>
-        private Contato obterContatoPorId(int IdContato)
+        public Contato obterContatoPorId(int IdContato)
         {
             try
             {
