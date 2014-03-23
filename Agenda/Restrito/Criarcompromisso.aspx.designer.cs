@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Agenda.Restrito
-{
-
-
-    public partial class Criarcompromisso
-    {
-
+namespace Agenda.Restrito {
+    
+    
+    public partial class Criarcompromisso {
+        
         /// <summary>
         /// txtTituloCompromisso control.
         /// </summary>
@@ -22,7 +20,16 @@ namespace Agenda.Restrito
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTituloCompromisso;
-
+        
+        /// <summary>
+        /// reqTitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqTitulo;
+        
         /// <summary>
         /// txtDescricao control.
         /// </summary>
@@ -31,7 +38,16 @@ namespace Agenda.Restrito
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescricao;
-
+        
+        /// <summary>
+        /// reqDescricao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDescricao;
+        
         /// <summary>
         /// Calendar1 control.
         /// </summary>
@@ -40,7 +56,7 @@ namespace Agenda.Restrito
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
-
+        
         /// <summary>
         /// lblMensagem control.
         /// </summary>
@@ -49,7 +65,7 @@ namespace Agenda.Restrito
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
-
+        
         /// <summary>
         /// btnCadastraCompromisso control.
         /// </summary>
