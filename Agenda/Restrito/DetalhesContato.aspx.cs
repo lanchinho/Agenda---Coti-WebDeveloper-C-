@@ -21,11 +21,11 @@ namespace Agenda.Restrito
                     {
                         int idContato = Convert.ToInt32(Request.QueryString["id"]);
 
-                        Contato c = contDal.obterContatoPorId(idContato);
+                        Contato contato = contDal.obterContatoPorId(idContato);
 
-                        txtNomeContato.Text = c.NomeContato;
-                        txtEmailContato.Text = c.EmailContato;
-                        txtTelefone.Text = c.Telefone;
+                        txtNomeContato.Text  = contato.NomeContato;
+                        txtEmailContato.Text = contato.EmailContato;
+                        txtTelefone.Text     = contato.Telefone;
                     }
                 }
                 catch (Exception ex)
@@ -43,11 +43,11 @@ namespace Agenda.Restrito
                 using (ContatoDal contDal = new ContatoDal())
                 {
                     int idContato = Convert.ToInt32(Request.QueryString["id"]);
-                    Contato c = contDal.obterContatoPorId(idContato);
+                    Contato contato = contDal.obterContatoPorId(idContato);
 
-                    contDal.excluirContato(c);
+                    contDal.excluirContato(contato);
 
-                    lblMensagem.Text = "Contato " + c.NomeContato + ", excluido com sucesso.";
+                    lblMensagem.Text = "Contato " + contato.NomeContato + ", excluido com sucesso.";
 
                     txtNomeContato.Text = string.Empty;
                     txtEmailContato.Text = string.Empty;
@@ -65,16 +65,16 @@ namespace Agenda.Restrito
         {
             try
             {
-                Contato c = new Contato();
+                Contato contato = new Contato();
 
-                c.IdContato = Convert.ToInt32(Request.QueryString["id"]);
-                c.NomeContato = txtNomeContato.Text;
-                c.EmailContato = txtEmailContato.Text;
-                c.Telefone = txtTelefone.Text;
+                contato.IdContato = Convert.ToInt32(Request.QueryString["id"]);
+                contato.NomeContato = txtNomeContato.Text;
+                contato.EmailContato = txtEmailContato.Text;
+                contato.Telefone = txtTelefone.Text;
 
                 using(ContatoDal contDal = new ContatoDal())
                 {
-                    contDal.atualizarContato(c);
+                    contDal.atualizarContato(contato);
                     lblMensagem.Text = "Dados atualizados com sucesso.";
                 }
 
