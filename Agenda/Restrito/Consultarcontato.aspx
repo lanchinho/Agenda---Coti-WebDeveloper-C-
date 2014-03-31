@@ -8,14 +8,14 @@
         <asp:Label ID="lblMensagem" runat="server" />
     </p>
 
-    <asp:GridView ID="gridContatos" runat="server" Width="100%" CssClass="table table-hover table-bordered">
+    <asp:GridView ID="gridContatos" runat="server" Width="100%" CssClass="table table-hover table-bordered" OnRowDataBound="gridContatos_RowDataBound">
         <EmptyDataTemplate>
             Nenhum Contato cadastrado no sistema
         </EmptyDataTemplate>
 
         <Columns>
             <asp:HyperLinkField
-                Text="Ir para página de edições"
+                Text="Editar Contatos"
                 DataNavigateUrlFields="IdContato"
                 DataNavigateUrlFormatString="/Restrito/DetalhesContato.aspx?id={0}" />
 

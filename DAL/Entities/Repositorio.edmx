@@ -4,16 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BancoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="BancoModelStoreContainer">
-          <EntitySet Name="Compromisso" EntityType="BancoModel.Store.Compromisso" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Contato" EntityType="BancoModel.Store.Contato" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Usuario" EntityType="BancoModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FKCompromissoUsuario" Association="BancoModel.Store.FKCompromissoUsuario">
+      <Schema Namespace="DB_AgendaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DB_AgendaModelStoreContainer">
+          <EntitySet Name="Compromisso" EntityType="DB_AgendaModel.Store.Compromisso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contato" EntityType="DB_AgendaModel.Store.Contato" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="DB_AgendaModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FKCompromissoUsuario" Association="DB_AgendaModel.Store.FKCompromissoUsuario">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Compromisso" EntitySet="Compromisso" />
           </AssociationSet>
-          <AssociationSet Name="FKContatoUsuario" Association="BancoModel.Store.FKContatoUsuario">
+          <AssociationSet Name="FKContatoUsuario" Association="DB_AgendaModel.Store.FKContatoUsuario">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Contato" EntitySet="Contato" />
           </AssociationSet>
@@ -49,8 +49,8 @@
           <Property Name="Senha" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <Association Name="FKCompromissoUsuario">
-          <End Role="Usuario" Type="BancoModel.Store.Usuario" Multiplicity="1" />
-          <End Role="Compromisso" Type="BancoModel.Store.Compromisso" Multiplicity="*" />
+          <End Role="Usuario" Type="DB_AgendaModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Compromisso" Type="DB_AgendaModel.Store.Compromisso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="IdUsuario" />
@@ -61,8 +61,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FKContatoUsuario">
-          <End Role="Usuario" Type="BancoModel.Store.Usuario" Multiplicity="1" />
-          <End Role="Contato" Type="BancoModel.Store.Contato" Multiplicity="*" />
+          <End Role="Usuario" Type="DB_AgendaModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Contato" Type="DB_AgendaModel.Store.Contato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="IdUsuario" />
@@ -72,19 +72,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BancoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DB_AgendaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="Conexao" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="Compromisso" EntityType="BancoModel.Compromisso" />
-          <EntitySet Name="Contato" EntityType="BancoModel.Contato" />
-          <EntitySet Name="Usuario" EntityType="BancoModel.Usuario" />
-          <AssociationSet Name="FKCompromissoUsuario" Association="BancoModel.FKCompromissoUsuario">
+          <EntitySet Name="Compromisso" EntityType="DB_AgendaModel.Compromisso" />
+          <EntitySet Name="Contato" EntityType="DB_AgendaModel.Contato" />
+          <EntitySet Name="Usuario" EntityType="DB_AgendaModel.Usuario" />
+          <AssociationSet Name="FKCompromissoUsuario" Association="DB_AgendaModel.FKCompromissoUsuario">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Compromisso" EntitySet="Compromisso" />
           </AssociationSet>
-          <AssociationSet Name="FKContatoUsuario" Association="BancoModel.FKContatoUsuario">
+          <AssociationSet Name="FKContatoUsuario" Association="DB_AgendaModel.FKContatoUsuario">
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Contato" EntitySet="Contato" />
           </AssociationSet>
@@ -93,39 +94,39 @@
           <Key>
             <PropertyRef Name="IdCompromisso" />
           </Key>
-          <Property Type="Int32" Name="IdCompromisso" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="Data" Nullable="false" Precision="3" />
-          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="BancoModel.FKCompromissoUsuario" FromRole="Compromisso" ToRole="Usuario" />
+          <Property Name="IdCompromisso" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Titulo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="DB_AgendaModel.FKCompromissoUsuario" FromRole="Compromisso" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Contato">
           <Key>
             <PropertyRef Name="IdContato" />
           </Key>
-          <Property Type="Int32" Name="IdContato" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="NomeContato" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="EmailContato" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Telefone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="IdUsuario" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="BancoModel.FKContatoUsuario" FromRole="Contato" ToRole="Usuario" />
+          <Property Name="IdContato" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeContato" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmailContato" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Telefone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="DB_AgendaModel.FKContatoUsuario" FromRole="Contato" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="IdUsuario" />
           </Key>
-          <Property Type="Int32" Name="IdUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Login" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Senha" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Compromisso" Relationship="BancoModel.FKCompromissoUsuario" FromRole="Usuario" ToRole="Compromisso" />
-          <NavigationProperty Name="Contato" Relationship="BancoModel.FKContatoUsuario" FromRole="Usuario" ToRole="Contato" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Senha" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Compromisso" Relationship="DB_AgendaModel.FKCompromissoUsuario" FromRole="Usuario" ToRole="Compromisso" />
+          <NavigationProperty Name="Contato" Relationship="DB_AgendaModel.FKContatoUsuario" FromRole="Usuario" ToRole="Contato" />
         </EntityType>
         <Association Name="FKCompromissoUsuario">
-          <End Type="BancoModel.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="BancoModel.Compromisso" Role="Compromisso" Multiplicity="*" />
+          <End Role="Usuario" Type="DB_AgendaModel.Usuario" Multiplicity="1" />
+          <End Role="Compromisso" Type="DB_AgendaModel.Compromisso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="IdUsuario" />
@@ -136,8 +137,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FKContatoUsuario">
-          <End Type="BancoModel.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="BancoModel.Contato" Role="Contato" Multiplicity="*" />
+          <End Role="Usuario" Type="DB_AgendaModel.Usuario" Multiplicity="1" />
+          <End Role="Contato" Type="DB_AgendaModel.Contato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuario">
               <PropertyRef Name="IdUsuario" />
@@ -152,37 +153,37 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BancoModelStoreContainer" CdmEntityContainer="Conexao">
+        <EntityContainerMapping StorageEntityContainer="DB_AgendaModelStoreContainer" CdmEntityContainer="Conexao">
           <EntitySetMapping Name="Compromisso">
-            <EntityTypeMapping TypeName="BancoModel.Compromisso">
+            <EntityTypeMapping TypeName="DB_AgendaModel.Compromisso">
               <MappingFragment StoreEntitySet="Compromisso">
-                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-                <ScalarProperty Name="Data" ColumnName="Data" />
-                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
-                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
                 <ScalarProperty Name="IdCompromisso" ColumnName="IdCompromisso" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Contato">
-            <EntityTypeMapping TypeName="BancoModel.Contato">
+            <EntityTypeMapping TypeName="DB_AgendaModel.Contato">
               <MappingFragment StoreEntitySet="Contato">
-                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
-                <ScalarProperty Name="EmailContato" ColumnName="EmailContato" />
-                <ScalarProperty Name="NomeContato" ColumnName="NomeContato" />
                 <ScalarProperty Name="IdContato" ColumnName="IdContato" />
+                <ScalarProperty Name="NomeContato" ColumnName="NomeContato" />
+                <ScalarProperty Name="EmailContato" ColumnName="EmailContato" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="BancoModel.Usuario">
+            <EntityTypeMapping TypeName="DB_AgendaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
-                <ScalarProperty Name="Senha" ColumnName="Senha" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="Nome" ColumnName="Nome" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

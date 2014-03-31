@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DAL.Entities;
+using DAL.Persistence;
 
 namespace Agenda.Restrito
 {
@@ -11,7 +13,43 @@ namespace Agenda.Restrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && Session != null)
+            {
+                try
+                {
+                    Usuario u = Session["usuario"] as Usuario;
 
+                    using (CompromissoDal compDal = new CompromissoDal())
+                    {
+                        gridCompromissos.DataSource = compDal.listaCompromissosDoUsuario(u.IdUsuario);
+                        gridCompromissos.DataBind();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblMensagem.Text = ex.Message;
+                }
+            }
+
+        }
+
+        protected void gridCompromissos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.Header)
+            {
+                e.Row.Cells[1].Visible = false;
+                e.Row.Cells[2].Text = "Título";
+                e.Row.Cells[3].Text = "Descrição";
+                e.Row.Cells[4].Text = "Data";
+                e.Row.Cells[5].Visible = false;
+      
+            }
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Cells[1].Visible = false;
+                e.Row.Cells[5].Visible = false;
+            }
         }
     }
 }

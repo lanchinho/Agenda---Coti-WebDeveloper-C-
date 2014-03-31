@@ -53,13 +53,26 @@ namespace DAL.Persistence
             }
         }
 
+        public List<Compromisso> listaCompromissosDoUsuario(int idUsuario)
+        {
+            try
+            {
+                return Con.Compromisso.Where(comp => comp.IdUsuario == idUsuario).ToList();
+            }
+            catch (Exception e)
+            {
+                
+                throw new Exception("Erro ao listar os compromissos do usuário: " + e.Message);
+            }
+        }
+
         /// <summary>
         /// Método responsável por obter um compromisso dado o seu ID
         /// </summary>
         /// <param name="IdCompromisso"></param>
         /// <returns>Compromisso</returns>
 
-        private Compromisso obterCompromissoPeloId(int IdCompromisso)
+        public Compromisso obterCompromissoPeloId(int IdCompromisso)
         {
             try
             {

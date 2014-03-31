@@ -41,7 +41,7 @@ namespace DAL.Persistence
         /// Método para listar todos os contatos registrados no banco
         /// </summary>
         /// <returns>Lista contendo todos os contatos</returns>
-        public List<Contato> listarTodos()
+        public List<Contato> listarTodosContatos()
         {
             try
             {
@@ -59,7 +59,7 @@ namespace DAL.Persistence
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Lista contendo todos os contatos de um dado Usuário</returns>
-        public List<Contato> listarTodosDoUsuario(int id)
+        public List<Contato> listarContatosDoUsuario(int id)
         {
             try
             {

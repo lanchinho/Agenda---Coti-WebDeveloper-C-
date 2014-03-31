@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="326d640676b24142b94463ef66413c33" Name="Diagram1">
-        <EntityTypeShape EntityType="BancoModel.Compromisso" Width="1.5" PointX="6.6442736548577779" PointY="19.114399203618245" />
-        <EntityTypeShape EntityType="BancoModel.Contato" Width="1.5" PointX="5.1737355688464524" PointY="13.929176873494487" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.Usuario" Width="1.5" PointX="9.7839071274660085" PointY="22.635968993714066" />
-        <AssociationConnector Association="BancoModel.FKCompromissoUsuario" />
-        <AssociationConnector Association="BancoModel.FKContatoUsuario" />
+      <Diagram DiagramId="46d2b6af987c46e5a446bd627f088669" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_AgendaModel.Compromisso" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_AgendaModel.Contato" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_AgendaModel.Usuario" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="DB_AgendaModel.FKCompromissoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_AgendaModel.FKContatoUsuario" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

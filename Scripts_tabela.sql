@@ -13,7 +13,7 @@ create table Contato(
 	NomeContato     nvarchar(50)       not null,
 	EmailContato    nvarchar(50)       not null,
 	Telefone        nvarchar(50)       not null,
-	IdUsuario       integer            not null  unique,
+	IdUsuario       integer            not null,
 	primary Key(IdContato)) 
 
 go
@@ -26,7 +26,7 @@ create table Compromisso(
 	Titulo               nvarchar(50)     not null,
 	Descricao            nvarchar(max)    not null,  
 	Data                 datetime         not null,
-	IdUsuario            integer          not null  unique,
+	IdUsuario            integer          not null,
 	primary key(IdCompromisso))
 
 go
