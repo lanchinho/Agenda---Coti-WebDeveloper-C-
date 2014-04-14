@@ -20,4 +20,6 @@
         </Columns>
     </asp:GridView>
 
+    <asp:Button ID="btnRelatorioCompromisso" runat="server" Text="Gerar Relatório" CssClass="btn btn-sucess" OnClick="btnRelatorioCompromisso_Click" />
+
 </asp:Content>

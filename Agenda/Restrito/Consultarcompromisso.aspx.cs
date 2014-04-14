@@ -51,5 +51,10 @@ namespace Agenda.Restrito
                 e.Row.Cells[5].Visible = false;
             }
         }
+
+        protected void btnRelatorioCompromisso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
