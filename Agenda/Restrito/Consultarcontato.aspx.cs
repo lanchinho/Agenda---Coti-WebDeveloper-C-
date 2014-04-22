@@ -53,5 +53,10 @@ namespace Agenda.Restrito
             }
 
         }
+
+        protected void btnRelatorioContato_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

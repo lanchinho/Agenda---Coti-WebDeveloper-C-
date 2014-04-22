@@ -22,4 +22,5 @@
         </Columns>
     </asp:GridView>
 
+    <asp:Button ID="btnRelatorioContato" runat="server" CssClass="btn btn-success" OnClick="btnRelatorioContato_Click" Text="Gerar Relatório"/>
 </asp:Content>
