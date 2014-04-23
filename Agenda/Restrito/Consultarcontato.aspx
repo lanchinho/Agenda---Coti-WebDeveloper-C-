@@ -18,7 +18,6 @@
                 Text="Editar Contatos"
                 DataNavigateUrlFields="IdContato"
                 DataNavigateUrlFormatString="/Restrito/DetalhesContato.aspx?id={0}" />
-
         </Columns>
     </asp:GridView>
 

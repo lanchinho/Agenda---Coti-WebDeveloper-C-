@@ -6,6 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DAL.Entities;
 using DAL.Persistence;
+using Agenda.Reports;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using BLL.Business;
 
 namespace Agenda.Restrito
 {
@@ -54,7 +58,18 @@ namespace Agenda.Restrito
 
         protected void btnRelatorioCompromisso_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AgendaBll agenda = new AgendaBll();
+                RptCompromisso cp = new RptCompromisso();
 
+                cp.SetDataSource(agenda.relatorioCompromisso());
+                cp.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, true, "relatorio"); 
+            }
+            catch (Exception ex)
+            {
+                lblMensagem.Text = ex.Message;
+            }
         }
     }
 }

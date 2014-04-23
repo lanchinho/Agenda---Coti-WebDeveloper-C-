@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSContato" targetNamespace="http://tempuri.org/DSContato.xsd" xmlns:mstns="http://tempuri.org/DSContato.xsd" xmlns="http://tempuri.org/DSContato.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSContato" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSContato" msprop:Generator_UserDSName="DSContato">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Relatorio" msprop:Generator_TableClassName="RelatorioDataTable" msprop:Generator_TableVarName="tableRelatorio" msprop:Generator_TablePropName="Relatorio" msprop:Generator_RowDeletingName="RelatorioRowDeleting" msprop:Generator_RowChangingName="RelatorioRowChanging" msprop:Generator_RowEvHandlerName="RelatorioRowChangeEventHandler" msprop:Generator_RowDeletedName="RelatorioRowDeleted" msprop:Generator_UserTableName="Relatorio" msprop:Generator_RowChangedName="RelatorioRowChanged" msprop:Generator_RowEvArgName="RelatorioRowChangeEvent" msprop:Generator_RowClassName="RelatorioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NomeContato" msprop:Generator_ColumnVarNameInTable="columnNomeContato" msprop:Generator_ColumnPropNameInRow="NomeContato" msprop:Generator_ColumnPropNameInTable="NomeContatoColumn" msprop:Generator_UserColumnName="NomeContato" type="xs:string" minOccurs="0" />
+              <xs:element name="EmailContato" msprop:Generator_ColumnVarNameInTable="columnEmailContato" msprop:Generator_ColumnPropNameInRow="EmailContato" msprop:Generator_ColumnPropNameInTable="EmailContatoColumn" msprop:Generator_UserColumnName="EmailContato" type="xs:string" minOccurs="0" />
+              <xs:element name="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_UserColumnName="Telefone" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
